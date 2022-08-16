@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionActivity"
+    android:background="@color/primary_color"
+    android:padding="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ProgressBar
+                android:id="@+id/pb_line"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:max="3"
+                android:progress="1"/>
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1/3"
+                android:layout_gravity="end"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_question_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is my question activity"
+                android:textColor="@color/primary_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--TODO: Radio Group-->
+
+            <RadioGroup
+                android:id="@+id/rg_answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb_answerOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Answer One"
+                    android:textSize="21sp"
+                    android:textColor="@color/primary_color"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_answerTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Answer One"
+                    android:textSize="21sp"
+                    android:textColor="@color/primary_color"/>
+
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_help" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/primary_tint_color"
+        android:padding="10dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="@color/primary_color"
+        android:textSize="21dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:icon="@drawable/ic_help"
+        app:backgroundTint="@color/primary_color"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
